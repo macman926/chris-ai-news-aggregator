@@ -15,6 +15,7 @@ dependencies = [
     "anthropic",
     "pydantic-settings",
     "python-dotenv",
+    "youtube-transcript-api",
 ]
 
 [project.scripts]
