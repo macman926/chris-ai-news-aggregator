@@ -4,6 +4,8 @@ from urllib.parse import parse_qs, urlparse
 import feedparser
 from youtube_transcript_api import NoTranscriptFound, TranscriptsDisabled, YouTubeTranscriptApi
 
+_yt_api = YouTubeTranscriptApi()
+
 from app.database import create_tables, get_session
 from app.models import Article, Source
 
@@ -27,8 +29,8 @@ def _video_id(url: str) -> str | None:
 
 def _fetch_transcript(video_id: str) -> str | None:
     try:
-        segments = YouTubeTranscriptApi.get_transcript(video_id)
-        return " ".join(s["text"] for s in segments)
+        transcript = _yt_api.fetch(video_id)
+        return " ".join(snippet.text for snippet in transcript)
     except (TranscriptsDisabled, NoTranscriptFound):
         return None
     except Exception:

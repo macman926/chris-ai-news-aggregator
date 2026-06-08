@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(uv sync *)"
+      "Bash(uv sync *)",
+      "Bash(mkdir -p c:/Users/cmcbor01/Documents/chris-ai-news-aggregator/tests)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\cmcbor01\\Documents\\chris-ai-news-aggregator"
     ]
   }
 }
