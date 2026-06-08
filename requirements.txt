@@ -1,0 +1,10 @@
+sqlalchemy>=2.0
+psycopg2-binary
+httpx
+feedparser
+beautifulsoup4
+lxml
+html2text
+anthropic
+pydantic-settings
+python-dotenv

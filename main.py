@@ -1,6 +1,4 @@
-def main() -> None:
-    print("Chris AI News Aggregator")
-
+from app.scheduler import run
 
 if __name__ == "__main__":
-    main()
+    run()
