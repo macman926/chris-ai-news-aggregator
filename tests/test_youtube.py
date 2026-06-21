@@ -149,7 +149,7 @@ def test_rss_feed_live():
     import feedparser
 
     # Anthropic's YouTube channel
-    url = "https://www.youtube.com/feeds/videos.xml?channel_id=UCTwEMeIxV1PfCFR0gDuY01A"
+    url = "https://www.youtube.com/feeds/videos.xml?channel_id=UCrDwWp7EBBv4NwvScIpBDOA"
     feed = feedparser.parse(url)
 
     assert len(feed.entries) > 0, "Expected at least one video in the Anthropic feed"
